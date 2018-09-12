@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+} /*"border-box" means that the width and height properties (and min/max properties) include content, padding and border*/
+
+body{
+    background-color: #aadacc;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+}
+
+header{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: calc(100% - 10px);
+}
+
+
+main{
+    background-color: #6eceb2;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 5%;
+    padding-top: 15%;
+}
+
+footer{
+    background-color: #e6e6e6;
+    padding: 2%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #808080;
+}
+
+
+/*Header - main page */
+
+.wrapper-header{
+    position: fixed;
+    margin-right: 20px;
+    background-color: #f2f2f2;
+    top: 0;
+    width: 100%;
+    display:grid;
+    padding-left: 0%;
+    padding-right: 0%;
+    margin-right: 20px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "area1 area3"
+    "area2 area2";
+}
+
+.header-area1 {
+    grid-area: area1;
+    padding: 3%;
+    height: 110px;
+}
+
+.header-area2 {
+    grid-area: area2;
+    padding: 2%;
+    display: none;
+}
+
+.header-area3 {
+    grid-area: area3;
+    padding: 0%;
+    height: 110px;
+}
+
+/*links in nav at main page*/
+header a:link{
+    margin-left: 4%;
+    margin-top: 0%;
+    color: #808080;
+    text-decoration: none;
+    display: inline-block;
+}
+
+header a:visited{
+    color: darkgrey;
+}
+
+header a:hover{
+    color: black;
+}
+
+#logo{
+    max-width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 30px;
+}
+
+.bigMenuTxt{
+    margin-top: 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.sections{
+    background-color: #e6e6e6;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 3%;
+    padding: 5%;
+    align-content: center;
+}
+
+.secTitle{
+    font-size: 12.5em;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #999999;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+
+.secList{
+    font-size: 3em;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: left;
+    color: #999999;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+
+.bulletpoint{
+    padding-left: 2%;
+}
+
+
+li:before {
+    content: "";
+    border-color: transparent #999999;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 0.9em;
+    position: relative;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/*Tablet version (area 3 with big menu is hidden)  ///////////////////////////////////////////////////////////////////////////*/
+
+@media all and (max-width: 768px) {
+    .wrapper-header{
+    display:grid;
+    padding-left: 0%;
+    padding-right: 0%;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "area1 area2"
+    "area3 area3";
+}
+
+.header-area1 {
+    grid-area: area1;
+    background-color: #666666;
+    font-size: 3.5vh;
+    padding-left: 4%;
+    padding-top: 4%;
+}
+
+
+.header-area2 {
+    grid-area: area2;
+    background-color: #666666;
+    padding: 8%;
+    display: block;
+}
+
+
+.header-area3 {
+    grid-area: area3;
+    text-align: right;
+    position: relative;
+    background-color: #666666;
+    overflow: hidden;
+    padding: 0%;
+    max-height: 0;
+    /*display: none;*/
+}
+
+/*Nav with burger ///////////////////*/
+
+#navSmall{
+        display: none;
+    }
+
+#navSmall2{
+        display: none;
+    }
+
+label {
+    font-size: 4.5vh;
+    float: right;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.burger-open {
+    grid-area: area3;
+    max-height: 500px;
+    padding: 3%;
+    text-align: right;
+    color: #000000;
+}
+
+
+.burger2-open {
+    grid-area: areaH3;
+    max-height: 500px;
+    padding: 3%;
+    text-align: right;
+    }
+
+}
+
+
+
+/*Mobile version (area 3 with big menu is hidden)  ///////////////////////////////////////////////////////////////////////////*/
+@media all and (max-width:400px) {
+
+    }
