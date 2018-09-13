@@ -2,6 +2,11 @@
     box-sizing: border-box;
 } /*"border-box" means that the width and height properties (and min/max properties) include content, padding and border*/
 
+*{
+    font-family: sans-serif;
+
+}
+
 body{
     background-color: #aadacc;
     padding-left: 20px;
@@ -14,25 +19,25 @@ header{
     margin-right: 20px;
     margin-bottom: 0px;
     margin-top: 0px;
-    width: calc(100% - 10px);
+    /*width: calc(100% - 10px);*/
 }
 
 
-main{
+.background{
     background-color: #6eceb2;
     margin-left: 20px;
     margin-right: 20px;
     padding-bottom: 5%;
-    padding-top: 15%;
+    padding-top: 0%;
 }
 
 footer{
-    background-color: #f2f2f2;
-    padding: 2%;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 0px;
     margin-bottom: 0px;
+    padding: 2%;
+    background-color: #f2f2f2;
     text-align: center;
     font-family: sans-serif;
     font-weight: bold;
@@ -43,15 +48,18 @@ footer{
 /*Header - main page */
 
 .wrapper-header{
-    position: fixed;
-    margin-right: 20px;
+    /*width: 90%;*/
+    position: sticky;
+    z-index: 1;
     background-color: #f2f2f2;
     top: 0;
-    width: 100%;
     display:grid;
+/*
     padding-left: 0%;
     padding-right: 0%;
-    margin-right: 20px;
+*/
+    margin-right: auto;
+    margin-left: auto;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     grid-template-areas:
@@ -63,25 +71,26 @@ footer{
     grid-area: area1;
     padding: 3%;
     height: 110px;
-    z-index: 1;
+/*    z-index: 1;*/
 }
 
 .header-area2 {
     grid-area: area2;
-    padding: 2%;
+    padding: 1%;
     display: none;
-    z-index: 1;
+    height: 110px;
+/*    z-index: 1;*/
 }
 
 .header-area3 {
     grid-area: area3;
     padding: 0%;
     height: 110px;
-    z-index: 1;
+/*    z-index: 1;*/
 }
 
 /*links in nav at main page*/
-header a:link{
+.wrapper-header a:link{
     margin-left: 4%;
     margin-top: 0%;
     color: #808080;
@@ -89,11 +98,11 @@ header a:link{
     display: inline-block;
 }
 
-header a:visited{
+.wrapper-header a:visited{
     color: darkgrey;
 }
 
-header a:hover{
+.wrapper-header a:hover{
     color: black;
 }
 
@@ -101,7 +110,8 @@ header a:hover{
     max-width: 100%;
     margin-top: auto;
     margin-bottom: auto;
-    padding-left: 30px;
+    padding-left: 5%;
+    z-index: 2;
 }
 
 .bigMenuTxt{
@@ -110,7 +120,9 @@ header a:hover{
     font-weight: bold;
 }
 
+
 .sections{
+    margin-top: 3%;
     background-color: #e6e6e6;
     margin-left: 5%;
     margin-right: 5%;
@@ -120,7 +132,7 @@ header a:hover{
 }
 
 .secTitle{
-    font-size: 12.5em;
+    font-size: 9.5em;
     font-family: sans-serif;
     font-weight: bold;
     text-align: center;
@@ -145,7 +157,6 @@ header a:hover{
     padding-left: 2%;
 }
 
-
 li:before {
     content: "";
     border-color: transparent #999999;
@@ -164,45 +175,118 @@ ul {
   list-style: none;
 }
 
-#logo{
-    z-index: 2;
+
+/*program*/
+
+.program{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "area1 area2 area3 area4"
+    "area5 area7 area9 area10"
+    "area6 area8 area9 area11"
+        ;
+    margin-top: 3%;
+}
+
+.program-area1{
+    grid-area: area1;
+
+}
+.program-area2{
+    grid-area: area2;
+}
+.program-area3{
+    grid-area: area3;
+}
+.program-area4{
+    grid-area: area4;
+}
+.program-area5{
+    grid-area: area5;
+}
+.program-area6{
+    grid-area: area6;
+}
+.program-area7{
+    grid-area: area7;
+}
+.program-area8{
+    grid-area: area8;
+}
+.program-area9{
+    grid-area: area9;
+}
+.program-area10{
+    grid-area: area10;
+}
+.program-area11{
+    grid-area: area11;
+}
+
+.program div{
+
+    font-size: 1.5em;
+    padding-left: 2%;
+    padding-right: 4%;
+    padding-bottom: 20%;
+    color: white;
+    background-color: gray;
+    margin: 1%;
+    text-transform: uppercase;
+}
+
+.program .program-area1, .program .program-area2, .program .program-area3, .program .program-area4{
+    padding-bottom: 2%;
+    text-align: center;
 }
 
 /*Tablet version (area 3 with big menu is hidden)  ///////////////////////////////////////////////////////////////////////////*/
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1100px) {
+
+.program div{
+
+    font-size: 0.7em;
+}
+
+.secTitle{
+    font-size: 5.5em;
+    }
+
+.secList{
+    font-size: 2em;
+    }
 
 .wrapper-header{
-    position: fixed;
-    margin-right: 20px;
-    background-color: #f2f2f2;
-    top: 0;
-    width: 100%;
     display:grid;
     padding-left: 0%;
     padding-right: 0%;
-    margin-right: 20px;
+    background-color: #f2f2f2;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     grid-template-areas:
-    "area1 area3"
-    "area2 area2";
+    "area1 area2"
+    "area3 area3";
 }
 
 .header-area1 {
     grid-area: area1;
-    background-color: #666666;
+    background-color: #f2f2f2;
     font-size: 3.5vh;
-    padding-left: 4%;
-    padding-top: 4%;
+    padding-left: 1%;
+    padding-top: 2%;
+    height: 110px;
 }
 
 
 .header-area2 {
     grid-area: area2;
-    background-color: #666666;
-    padding: 8%;
+    background-color: #f2f2f2;
+    padding: 1%;
     display: block;
+     height: 110px;
 }
 
 
@@ -210,12 +294,17 @@ ul {
     grid-area: area3;
     text-align: right;
     position: relative;
-    background-color: #666666;
+    background-color: #f2f2f2;
     overflow: hidden;
     padding: 0%;
     max-height: 0;
     /*display: none;*/
 }
+
+#logo{
+    padding-left: 5%;
+    }
+
 
 /*Nav with burger ///////////////////*/
 
@@ -231,7 +320,7 @@ label {
     font-size: 4.5vh;
     float: right;
     cursor: pointer;
-    color: #ffffff;
+    color: #808080;
 }
 
 .burger-open {
@@ -250,12 +339,119 @@ label {
     text-align: right;
     }
 
+
+
+
 }
 
 
 
 
-/*Mobile version (area 3 with big menu is hidden)  ///////////////////////////////////////////////////////////////////////////*/
-@media all and (max-width:400px) {
 
+/*Mobile/wider version (area 3 with big menu is hidden)  ///////////////////////////////////////////////////////////////////////////*/
+@media all and (max-width: 900px) {
+
+#logo{
+padding-left: 5%;
+}
+
+.program{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(11, auto);
+    grid-template-areas:
+    "area1"
+    "area5"
+    "area6"
+    "area2"
+    "area7"
+    "area8"
+    "area3"
+    "area9"
+    "area4"
+    "area10"
+    "area11";
+    margin-top: 3%;
+}
+
+.program div{
+    font-size: 1.5em;
+}
+
+.secTitle{
+    font-size: 4em;
     }
+
+.secList{
+    font-size: 1.5em;
+    }
+    min-width:{
+        400px;
+    }
+
+    body{
+        padding: 0%;
+        margin: 0%;
+    }
+
+}
+
+
+
+
+
+
+
+
+/*Mobile version (area 3 with big menu is hidden)  ///////////////////////////////////////////////////////////////////////////*/
+@media all and (max-width: 750px) {
+
+#logo{
+padding-left: 5%;
+}
+
+.program{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(11, auto);
+    grid-template-areas:
+    "area1"
+    "area5"
+    "area6"
+    "area2"
+    "area7"
+    "area8"
+    "area3"
+    "area9"
+    "area4"
+    "area10"
+    "area11";
+    margin-top: 3%;
+}
+
+.program div{
+    font-size: 0.8em;
+}
+
+.secTitle{
+    font-size: 1.5em;
+    }
+
+.secList{
+    font-size: 0.8em;
+    }
+    min-width:{
+        400px;
+    }
+
+    body{
+        padding: 0%;
+        margin: 0%;
+    }
+
+}
+
+
+
+
+

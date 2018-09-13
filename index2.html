@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
+    <title>Curriculum MMD 2018</title>
+</head>
+
+<body>
+    <!--    <header>-->
+
+    <div class="background">
+        <div class="wrapper-header">
+            <div class="header-area1">
+                <a href="index.html" id="logo"><img alt="KEA logo" src="images/logo-main-black-single.png" id="logo"></a>
+            </div>
+
+
+            <div class="header-area2">
+
+                <label id="burger">&#9776;</label>
+
+                <nav id="navSmall">
+                    <a href="#overview">OVERVIEW</a>
+                    <a href="#programStructure">PROGRAM STRUCTURE</a>
+                    <a href="#exams">EXAMS</a>
+                    <a href="#internships">INTERNSHIPS</a>
+                </nav>
+            </div>
+
+            <nav id="header-area3" class="header-area3">
+                <a href="#overview">
+                    <h2 class="bigMenuTxt"> Overview</h2>
+                </a>
+                <a href="#programStructure">
+                    <h2 class="bigMenuTxt"> Program structure </h2>
+                </a>
+                <a href="#exams">
+                    <h2 class="bigMenuTxt"> Exams </h2>
+                </a>
+                <a href="#internships">
+                    <h2 class="bigMenuTxt"> Interships </h2>
+                </a>
+            </nav>
+
+        </div>
+        <!--    </header>-->
+
+        <main>
+            <section id="section1" class="sections">
+                <h2 class="secTitle" id="overview">OVERVIEW</h2>
+                <div>
+                    <ul class="secList">
+                        <li class="bulletpoint">PROGRAM PURPOSE</li>
+                        <li class="bulletpoint">INTENDED LEARNING OUTCOME</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="section2" class="sections">
+                <h2 class="secTitle">PROGRAM STRUCTURE</h2>
+                <div class="program">
+                    <div class="program-area1">1</div>
+                    <div class="program-area2">2</div>
+                    <div class="program-area3">3</div>
+                    <div class="program-area4">4</div>
+                    <div class="program-area5">Design and programming of digital user interfaces 1</div>
+                    <div class="program-area6">Design and programming of digital content 1</div>
+                    <div class="program-area7"> Design and programming of digital user interfaces 2</div>
+                    <div class="program-area8">Design and programming of digital content 2
+                    </div>
+                    <div class="program-area9">Electives</div>
+                    <div class="program-area10">Internship</div>
+                    <div class="program-area11">Final exam</div>
+                </div>
+
+                <ul class="secList">
+                    <li class="bulletpoint">SUBJECT AREAS</li>
+                    <li class="bulletpoint">EFFECTIVE DATE AND TRANSITIONAL ARRANGEMENTS</li>
+                    <li class="bulletpoint">CREDIT TRANSFER RULES</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+    <footer>
+        <h1>FOOTER</h1>
+    </footer>
+
+    <script>
+        var burger = document.querySelector("#burger");
+        var headerArea3 = document.querySelector("#header-area3");
+
+        burger.addEventListener("click", functionOpen);
+
+        function functionOpen() {
+            headerArea3.classList.toggle("burger-open");
+
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
